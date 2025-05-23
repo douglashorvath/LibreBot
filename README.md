@@ -74,6 +74,8 @@ LIBREBOT/
 │   ├── Tampa Caixa Montagem (PowerConnector).stl
 │   ├── Tampa Montagem Fusível.stl
 ├── images/
+│   ├── Esquema_de_ligação.png
+│   ├── EstruturaCompleta_VisãoExplodida2.png
 ├── src/
 │   └── LibreBot_Code.ino
 ├── LICENSE

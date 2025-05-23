@@ -173,6 +173,7 @@ Distribuído sob a **Licença GPL3**. Isso significa que você pode usar, modifi
 
 - Douglas Horvath – Desenvolvedor  
 - Rafael Seiji Nasso Moreira - Desenvolvedor 
+- Rodrigo Vilela - Orientador
 - Apoio técnico: FATEC Presidente Prudente  
 
 ---

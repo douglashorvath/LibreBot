@@ -1,11 +1,15 @@
+
 # 🤖 LibreBot
 
-**LibreBot** é uma plataforma de robótica de baixo custo, modular e sustentável, ideal para projetos educacionais, prototipagem e desenvolvimento de sistemas autônomos. Desenvolvida com materiais recicláveis, motores de fácil aquisição (como motor de vidro elétrico universal) e componentes eletrônicos amplamente disponíveis, a LibreBot busca democratizar o acesso à robótica e incentivar a criatividade no desenvolvimento de soluções mecatrônicas.
+**LibreBot** é uma plataforma de robótica **modular, sustentável e de baixo custo**, ideal para aplicações educacionais, prototipagem e projetos de automação. O projeto utiliza motores de vidro elétrico universais, componentes amplamente disponíveis, peças impressas em 3D e materiais reciclados — promovendo acessibilidade e reaproveitamento de recursos.
 
 ---
 
-## 🚀 Visão Geral
+## 📦 Estrutura do Projeto
 
+<<<<<<< HEAD
+```
+=======
 LibreBot é apenas o começo. Esta plataforma foi pensada como **uma base versátil** sobre a qual outros projetos podem ser desenvolvidos. Seja para um robô seguidor de linha, autônomo, controlado por app ou sensor, o LibreBot oferece um chassi robusto e facilmente personalizável com componentes acessíveis.
 
 ---
@@ -60,11 +64,130 @@ O código desenvolvido em C++ para ESP32 possui as seguintes características:
 ## 📂 Estrutura do Projeto
 
 ```bash
+>>>>>>> 970ff92a94cb4526d6bba413310c6c8a117d6b9b
 LibreBot/
-├── src/
-│   └── main.cpp         # Código principal do robô (ESP32)
-├── 3D_models/
-│   └── engrenagens.stl  # Arquivos de impressão 3D
-├── images/
-│   └── esquema_bb.png   # Esquema de ligação (Fritzing)
-├── README.md            # Você está aqui!
+├── 3D_models/                       # Modelos para impressão 3D das peças mecânicas
+│   ├── Base Principal.stl
+│   ├── Bracket Bateria 12v (v1).stl
+│   ├── Bracket Bateria 12v (v2).stl
+│   ├── Caixa Montagem (PowerButton).stl
+│   ├── Engrenagem_eixo.stl
+│   ├── Engrenagem_motor (fixa).stl
+│   ├── Engrenagem_motor (inner_gear).stl
+│   ├── Tampa Caixa Montagem (PowerConnector).stl
+│   └── Tampa Montagem Fusível.stl
+│
+├── images/                         # Imagens e esquemas
+│   └── EstruturaCompleta_VisãoExplodida2.png
+│
+├── src/                            # Código-fonte do robô
+│   └── LibreBot_Code.ino
+│
+├── LICENSE                         # Licença de uso (GPL3)
+└── README.md                       # Este arquivo
+```
+
+---
+
+## 📱 Controle Remoto com RoboRemo
+
+Utilizamos o aplicativo **[RoboRemo](https://roboremo.app/)** para controle via Bluetooth, pela sua flexibilidade, leveza e facilidade de configuração.
+
+### Configuração no App:
+
+- **Slider de Velocidade (`s2`)**  
+  - Vai de `-100` (ré) a `+100` (frente)  
+  - Com retorno automático ao centro  
+  - Controla a velocidade máxima dos motores  
+
+- **Slider de Direção (`s1`)**  
+  - Vai de `-100` (esquerda) a `+100` (direita)  
+  - Com retorno automático ao centro  
+  - Controla a diferença de velocidade entre os motores para curvas suaves  
+
+- **Botão Engage**  
+  - Texto: `Engage`  
+  - Comando enviado: `eng`  
+  - Liga/desliga o movimento do robô
+
+Essa interface permite ao operador ter controle preciso e intuitivo do robô, sendo ideal para testes em campo e uso educacional.
+
+---
+
+## ⚙️ Funcionamento do Código
+
+O arquivo `LibreBot_Code.ino` contém toda a lógica embarcada para o controle do robô:
+
+- **Engage/Desengage**: sistema de segurança para evitar acionamentos indesejados.
+- **Leitura dos comandos via Bluetooth**: leitura e interpretação dos sliders e botões do RoboRemo.
+- **PWM inteligente com curva suave**: cálculo da velocidade dos motores baseado na soma de direção e velocidade.
+- **Giro em eixo**: o robô gira no próprio eixo apenas quando está parado e há comando de direção.
+- **Fine Tuning**: compensação programável para correção de desbalanceamento entre motores.
+
+---
+
+## 🧩 Impressão 3D
+
+Os arquivos `.stl` localizados na pasta `3D_models/` foram projetados para facilitar a montagem e garantir boa fixação dos motores e componentes elétricos. Todas as peças foram pensadas para impressão com PLA ou PETG em impressoras FDM.
+
+### Recomendações:
+- **Resolução**: 0.2mm para engrenagens e suportes, 0,32mm para suportes da bateria
+- **Infill**: 100% para engrenagens e 20% ou superior demais peças
+- **Suportes**: Não é necessário
+- **Nozzle**: As peças foram impressas com nozzle de 0,6mm
+
+---
+
+## 🔌 Esquema de Ligação
+
+As ligações elétricas podem ser feitas de acordo com esquemático em:
+
+```
+images/
+└── Esquema_de_ligação.png
+```
+
+---
+
+## 🔋 Alimentação
+
+O robô pode ser alimentado por:
+- Fonte de 12V
+- Bateria 12v (Li-ion ou chumbo)
+
+Recomenda-se o uso de um fusível na entrada de alimentação para segurança.
+
+---
+
+## 🧪 Testes Realizados
+
+- Controle remoto via Bluetooth
+- Curvas suaves baseadas em diferencial de velocidade
+- Giro estático no eixo
+- Testes de precisão com motores de vidro elétrico de diferentes fabricantes
+- Autonomia de controle e estabilidade
+- Testes de carregamento de peso
+
+---
+
+## 📘 Licença
+
+Distribuído sob a **Licença GPL3**. Isso significa que você pode usar, modificar e distribuir este projeto livremente, desde que preserve os devidos créditos.
+
+---
+
+## 👥 Colaboradores
+
+- Douglas Horvath – Desenvolvedor  
+- Rafael Seiji Nasso Moreira - Desenvolvedor 
+- Apoio técnico: FATEC Presidente Prudente  
+
+---
+
+## ✨ Objetivo
+
+O objetivo principal do LibreBot é servir como uma **base de aprendizado, experimentação e utilização industrial** para estudantes, profissionais, hobbystas e entusiastas da robótica que desejam iniciar projetos maiores ou mais complexos a partir de uma fundação simples, robusta e bem documentada.
+
+---
+
+**LibreBot** — Democratizando a robótica com criatividade, sustentabilidade e acessibilidade.

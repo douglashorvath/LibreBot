@@ -8,7 +8,7 @@
 ## 📦 Estrutura do Projeto
 
 
-LibreBot é apenas o começo. Esta plataforma foi pensada como **uma base versátil** sobre a qual outros projetos podem ser desenvolvidos. Seja para um robô seguidor de linha, autônomo, controlado por app ou sensor, o LibreBot oferece um chassi robusto e facilmente personalizável com componentes acessíveis.
+LibreBot é apenas o começo. Esta plataforma foi pensada como **uma base versátil** sobre a qual outros projetos podem ser desenvolvidos. Seja para um robô seguidor de linha, autônomo, controlado por app ou sensor, o LibreBot oferece uma estrutura de tração robusta e facilmente personalizável para diversos chassis com componentes acessíveis e com alta disponibilidade.
 
 ---
 

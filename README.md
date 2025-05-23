@@ -7,9 +7,7 @@
 
 ## 📦 Estrutura do Projeto
 
-<<<<<<< HEAD
-```
-=======
+
 LibreBot é apenas o começo. Esta plataforma foi pensada como **uma base versátil** sobre a qual outros projetos podem ser desenvolvidos. Seja para um robô seguidor de linha, autônomo, controlado por app ou sensor, o LibreBot oferece um chassi robusto e facilmente personalizável com componentes acessíveis.
 
 ---
@@ -29,7 +27,7 @@ LibreBot é apenas o começo. Esta plataforma foi pensada como **uma base versá
 
 ## 📱 Controle via App RoboRemo
 
-A plataforma é controlada remotamente usando o app [RoboRemo](https://play.google.com/store/apps/details?id=com.hardcoded.roboremo) (versão gratuita), configurado com:
+A plataforma é controlada remotamente usando o app [RoboRemo](https://roboremo.app/) (versão gratuita), configurado com:
 
 - **Slider de Velocidade** (`s2`):  
   - Intervalo: `-100` (ré) a `+100` (frente)  
@@ -63,8 +61,6 @@ O código desenvolvido em C++ para ESP32 possui as seguintes características:
 
 ## 📂 Estrutura do Projeto
 
-```bash
->>>>>>> 970ff92a94cb4526d6bba413310c6c8a117d6b9b
 LibreBot/
 ├── 3D_models/                       # Modelos para impressão 3D das peças mecânicas
 │   ├── Base Principal.stl
@@ -78,7 +74,8 @@ LibreBot/
 │   └── Tampa Montagem Fusível.stl
 │
 ├── images/                         # Imagens e esquemas
-│   └── EstruturaCompleta_VisãoExplodida2.png
+│   └── Esquema_de_ligação.png
+    └── EstruturaCompleta_VisãoExplodida2.png
 │
 ├── src/                            # Código-fonte do robô
 │   └── LibreBot_Code.ino

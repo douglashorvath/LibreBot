@@ -59,10 +59,11 @@ O código desenvolvido em C++ para ESP32 possui as seguintes características:
 
 ---
 
-## 📂 Estrutura do Projeto
+## 🧩 Estrutura do Projeto
 
-LibreBot/
-├── 3D_models/                       # Modelos para impressão 3D das peças mecânicas
+```
+LIBREBOT/
+├── 3D_models/
 │   ├── Base Principal.stl
 │   ├── Bracket Bateria 12v (v1).stl
 │   ├── Bracket Bateria 12v (v2).stl
@@ -71,17 +72,12 @@ LibreBot/
 │   ├── Engrenagem_motor (fixa).stl
 │   ├── Engrenagem_motor (inner_gear).stl
 │   ├── Tampa Caixa Montagem (PowerConnector).stl
-│   └── Tampa Montagem Fusível.stl
-│
-├── images/                         # Imagens e esquemas
-│   └── Esquema_de_ligação.png
-    └── EstruturaCompleta_VisãoExplodida2.png
-│
-├── src/                            # Código-fonte do robô
+│   ├── Tampa Montagem Fusível.stl
+├── images/
+├── src/
 │   └── LibreBot_Code.ino
-│
-├── LICENSE                         # Licença de uso (GPL3)
-└── README.md                       # Este arquivo
+├── LICENSE
+└── README.md
 ```
 
 ---

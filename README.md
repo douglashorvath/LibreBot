@@ -25,7 +25,7 @@ LibreBot é apenas o começo. Esta plataforma foi pensada como **uma base versá
 
 ## 📱 Controle via App RoboRemo
 
-A plataforma é controlada remotamente usando o app [RoboRemo](https://play.google.com/store/apps/details?id=com.hardcoded.roboremo) (versão Joy), configurado com:
+A plataforma é controlada remotamente usando o app [RoboRemo](https://play.google.com/store/apps/details?id=com.hardcoded.roboremo) (versão gratuita), configurado com:
 
 - **Slider de Velocidade** (`s2`):  
   - Intervalo: `-100` (ré) a `+100` (frente)  
